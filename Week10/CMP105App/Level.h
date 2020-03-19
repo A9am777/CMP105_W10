@@ -4,7 +4,11 @@
 #include "Framework/Input.h"
 #include <string>
 #include <iostream>
+#include "Framework/TileMap.h"
+#include "Player.h"
 
+#define tileSiz 30
+#define tileTexSiz 16
 
 class Level{
 public:
@@ -23,4 +27,8 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+	TileMap map;
+	std::vector<GameObject> tiles;
+	sf::Vector2u tileDim;
+	Player player;
 };
